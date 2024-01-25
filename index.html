@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tik tak game</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #bd7c7c;
+      }
+      h1 {
+        display: block;
+        text-align: center;
+        font-family: cursive;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background: #bd7c7c;
+      }
+      .gamebox {
+        width: 100%;
+        max-width: 500px;
+        max-height: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        background-color: #ffd230;
+        border-radius: 20px;
+        padding: 20px 10px;
+      }
+      .boxes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .boxes button {
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        margin: 4px;
+        cursor: pointer;
+        width: 8vmin;
+        height: 8vmin;
+        font-size: 1.3rem;
+        color: rgb(172, 75, 75);
+        background-color: #fff;
+      }
+      .boxes button:hover:focus {
+        background: #2afffba2;
+        box-shadow: 2px 2px 6px #f8f8f8;
+      }
+
+      .TextBox {
+        text-align: left;
+      }
+      .msg-container {
+        text-align: center;
+        text-align: center;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #msg {
+        font-size: 2rem;
+        color: rgb(240 255 12);
+        margin: 20px;
+        text-shadow: 5px 4px 6px #000;
+      }
+      #newGame {
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        margin: 4px;
+        cursor: pointer;
+        width: 21vmin;
+        height: 6vmin;
+        font-size: 1.3rem;
+        color: rgb(254 254 254);
+        background-color: #302929;
+      }
+      #Resetbtn {
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        margin: 4px;
+        cursor: pointer;
+        width: 21vmin;
+        height: 6vmin;
+        font-size: 1.3rem;
+        color: rgb(254 254 254);
+        background-color: #302929;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      @media (max-width: 767px) {
+        .gamebox {
+          flex-direction: column;
+          max-height: 438px;
+        }
+        .boxes button {
+          width: 12vmin;
+          height: 11vmin;
+        }
+        #newGame{
+          width: 49vmin;
+          height: 13vmin;
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 460px) {
+        .container {
+          height: 80vh;
+        }
+        .boxes button {
+          width: 20vw;
+          height: 11vh;
+        }
+        #Resetbtn {
+          width: 26vw;
+          height: 6vh;
+        }
+
+        #newGame{
+          width: 90%;
+          height: 13vmin;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tic Tac Toe</h1>
+    <div class="msg-container hide">
+      <p id="msg">Winner</p>
+      <button id="newGame">New Game</button>
+    </div>
+    <div class="container">
+      <div class="gamebox">
+        <div class="boxes">
+          <button id="box"></button>
+          <button id="box"></button>
+          <button id="box"></button>
+          <button id="box"></button>
+          <button id="box"></button>
+          <button id="box"></button>
+          <button id="box"></button>
+          <button id="box"></button>
+          <button id="box"></button>
+        </div>
+        <div class="TextBox">
+          <h2>Tik Tac Toe</h2>
+          <h1>Game Play</h1>
+          <p>Lorem ipsum dolor sit.</p>
+        </div>
+      </div>
+      <button onclick="Resetbtn()" id="Resetbtn">Reset</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
